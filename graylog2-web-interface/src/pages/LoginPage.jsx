@@ -88,7 +88,7 @@ const LoginPage = () => {
   return (
     <DocumentTitle title="Sign in">
       <LoginBox>
-        <legend><Icon name="users" /> Welcome to Graylog</legend>
+        <legend><Icon name="users" /> Welcome to tbSyslog</legend>
         <LoginPageStyles />
         {formatLastError()}
         {renderLoginForm()}
