@@ -78,9 +78,7 @@ const AuthenticationPage = () => {
                                           finishedLoading={finishedLoading} />
                     )}>
           <span>Configure tbSyslog&apos;s authentication services of this tbSyslog cluster.</span>
-          <span>Read more authentication in the <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                                                                   text="documentation" />.
-          </span>
+         
           <AuthenticationOverviewLinks />
         </PageHeader>
 
