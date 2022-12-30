@@ -145,7 +145,7 @@ const Routes = {
       RULE: (ruleId) => `/system/pipelines/rules/${ruleId}`,
       SIMULATOR: '/system/pipelines/simulate',
     },
-    ENTERPRISE: '/system/enterprise',
+    // ENTERPRISE: '/system/enterprise',
     SIDECARS: {
       OVERVIEW: '/system/sidecars',
       STATUS: (sidecarId) => `/system/sidecars/${sidecarId}/status`,
