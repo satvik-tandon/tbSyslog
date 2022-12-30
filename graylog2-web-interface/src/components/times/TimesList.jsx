@@ -60,7 +60,7 @@ const TimesList = createReactClass({
 
           <p className="description">
             Dealing with timezones can be confusing. Here you can see the timezone applied to different components of your system.
-            You can check timezone settings of specific graylog-server nodes on their respective detail page.
+            You can check timezone settings of specific tbSyslog-server nodes on their respective detail page.
           </p>
 
           <dl className="system-dl">
