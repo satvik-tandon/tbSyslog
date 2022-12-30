@@ -57,7 +57,7 @@ public class ClusterStatsResource extends RestResource {
     @Path("/elasticsearch")
     @Timed
     @ApiOperation(value = "Elasticsearch information.",
-            notes = "This resource returns information about the Elasticsearch Cluster.")
+            notes = "This resource returns information about the tbSyslog Cluster.")
     public ElasticsearchStats elasticsearchStats() {
         return clusterStatsService.elasticsearchStats();
     }

@@ -90,7 +90,7 @@ public class IndexerOverviewResource extends RestResource {
     @Deprecated
     public IndexerOverview index() throws TooManyAliasesException {
         if (!cluster.isConnected()) {
-            throw new ServiceUnavailableException("Elasticsearch cluster is not available, check your configuration and logs for more information.");
+            throw new ServiceUnavailableException("tbSyslog cluster is not available, check your configuration and logs for more information.");
         }
 
         try {
@@ -107,7 +107,7 @@ public class IndexerOverviewResource extends RestResource {
     @Produces(MediaType.APPLICATION_JSON)
     public IndexerOverview index(@ApiParam(name = "indexSetId") @PathParam("indexSetId") String indexSetId) throws TooManyAliasesException {
         if (!cluster.isConnected()) {
-            throw new ServiceUnavailableException("Elasticsearch cluster is not available, check your configuration and logs for more information.");
+            throw new ServiceUnavailableException("tbSyslog cluster is not available, check your configuration and logs for more information.");
         }
 
         final IndexSet indexSet = getIndexSet(indexSetRegistry, indexSetId);

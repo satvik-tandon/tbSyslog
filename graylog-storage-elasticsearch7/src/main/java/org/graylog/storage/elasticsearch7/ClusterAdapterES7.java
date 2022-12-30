@@ -214,7 +214,7 @@ public class ClusterAdapterES7 implements ClusterAdapter {
         final Request request = new Request("GET", "/_cluster/stats/nodes/*");
 
         final JsonNode clusterStatsResponseJson = jsonApi.perform(request,
-                "Couldn't read Elasticsearch cluster stats");
+                "Couldn't read tbSyslog cluster stats");
         final String clusterName = clusterStatsResponseJson.path("cluster_name").asText();
 
         String clusterVersion = null;

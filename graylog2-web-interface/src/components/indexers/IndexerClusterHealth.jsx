@@ -49,11 +49,9 @@ const IndexerClusterHealth = createReactClass({
     return (
       <Row className="content">
         <Col md={12}>
-          <h2>Elasticsearch cluster</h2>
+          <h2>tbSyslog cluster</h2>
 
           <SmallSupportLink>
-            The possible Elasticsearch cluster states and more related information is available in the{' '}
-            <DocumentationLink page={DocsHelper.PAGES.CONFIGURING_ES} text="Graylog documentation" />.
           </SmallSupportLink>
 
           {content}

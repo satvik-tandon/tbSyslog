@@ -50,7 +50,7 @@ public class IndexerClusterResource extends RestResource {
     @Produces(MediaType.APPLICATION_JSON)
     public ClusterName clusterName() {
         final String clusterName = cluster.clusterName()
-                .orElseThrow(() -> new InternalServerErrorException("Couldn't read Elasticsearch cluster health"));
+                .orElseThrow(() -> new InternalServerErrorException("Couldn't read tbSyslog cluster health"));
         return ClusterName.create(clusterName);
     }
 
@@ -62,6 +62,6 @@ public class IndexerClusterResource extends RestResource {
     @Produces(MediaType.APPLICATION_JSON)
     public ClusterHealth clusterHealth() {
         return cluster.clusterHealthStats()
-                .orElseThrow(() -> new InternalServerErrorException("Couldn't read Elasticsearch cluster health"));
+                .orElseThrow(() -> new InternalServerErrorException("Couldn't read tbSyslog cluster health"));
     }
 }

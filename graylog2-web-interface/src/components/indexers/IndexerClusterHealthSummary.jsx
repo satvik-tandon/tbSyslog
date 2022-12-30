@@ -47,7 +47,7 @@ class IndexerClusterHealthSummary extends React.Component {
   };
 
   _formatTextForHealth = (health) => {
-    const text = `Elasticsearch cluster is ${this._formatHealthStatus(health)}.`;
+    const text = `tbSyslog cluster is ${this._formatHealthStatus(health)}.`;
 
     switch (this._formatHealthStatus(health)) {
       case 'green': return text;

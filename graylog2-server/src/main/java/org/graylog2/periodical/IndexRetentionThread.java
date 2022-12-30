@@ -63,7 +63,7 @@ public class IndexRetentionThread extends Periodical {
     @Override
     public void doRun() {
         if (!cluster.isConnected() || !cluster.isHealthy()) {
-            LOG.info("Elasticsearch cluster not available, skipping index retention checks.");
+            LOG.info("tbSyslog cluster not available, skipping index retention checks.");
             return;
         }
 

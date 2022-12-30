@@ -124,7 +124,7 @@ public class ClusterAdapterES6 implements ClusterAdapter {
     @Override
     public ClusterAllocationDiskSettings clusterAllocationDiskSettings() {
         final GetAllocationDiskSettings request = new GetAllocationDiskSettings.Builder().build();
-        final JestResult response = JestUtils.execute(jestClient, request, () -> "Unable to read Elasticsearch cluster settings");
+        final JestResult response = JestUtils.execute(jestClient, request, () -> "Unable to read tbSyslog cluster settings");
         final JsonNode json = response.getJsonObject();
         final JsonNode floodStageSetting = findEffectiveSettingInSettingsGroups(json, "flood_stage", true);
         return ClusterAllocationDiskSettingsFactory.create(
@@ -187,7 +187,7 @@ public class ClusterAdapterES6 implements ClusterAdapter {
         final Health clusterHealthRequest = new Health.Builder()
                 .addIndex(indices)
                 .build();
-        final JestResult clusterHealthResponse = JestUtils.execute(jestClient, clusterHealthRequest, () -> "Couldn't read Elasticsearch cluster health");
+        final JestResult clusterHealthResponse = JestUtils.execute(jestClient, clusterHealthRequest, () -> "Couldn't read tbSyslog cluster health");
         final JsonNode clusterHealthJson = clusterHealthResponse.getJsonObject();
         return ShardStats.create(
                 clusterHealthJson.path("number_of_nodes").asInt(-1),
@@ -218,7 +218,7 @@ public class ClusterAdapterES6 implements ClusterAdapter {
 
     @Override
     public ClusterStats clusterStats() {
-        final JestResult clusterStatsResponse = JestUtils.execute(jestClient, new Stats.Builder().build(), () -> "Couldn't read Elasticsearch cluster stats");
+        final JestResult clusterStatsResponse = JestUtils.execute(jestClient, new Stats.Builder().build(), () -> "Couldn't read tbSyslog stats");
         final JsonNode clusterStatsResponseJson = clusterStatsResponse.getJsonObject();
         final String clusterName = clusterStatsResponseJson.path("cluster_name").asText();
 

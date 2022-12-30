@@ -68,7 +68,7 @@ public class IndexRangesCleanupPeriodical extends Periodical {
     @Override
     public void doRun() {
         if (!cluster.isConnected() || !cluster.isHealthy()) {
-            LOG.info("Skipping index range cleanup because the Elasticsearch cluster is unreachable or unhealthy");
+            LOG.info("Skipping index range cleanup because the tbSyslog cluster is unreachable or unhealthy");
             return;
         }
 

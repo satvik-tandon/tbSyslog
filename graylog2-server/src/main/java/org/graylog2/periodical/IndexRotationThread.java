@@ -83,7 +83,7 @@ public class IndexRotationThread extends Periodical {
                 }
             });
         } else {
-            LOG.debug("Elasticsearch cluster isn't healthy. Skipping index rotation.");
+            LOG.debug("tbSyslog cluster isn't healthy. Skipping index rotation.");
         }
     }
 

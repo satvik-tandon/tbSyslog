@@ -69,10 +69,10 @@ class NotificationsFactory {
         };
       case 'es_cluster_red':
         return {
-          title: 'Elasticsearch cluster unhealthy (RED)',
+          title: 'tbSyslog cluster unhealthy (RED)',
           description: (
             <span>
-              The Elasticsearch cluster state is RED which means shards are unassigned.
+              The tbSyslog cluster state is RED which means shards are unassigned.
               This usually indicates a crashed and corrupt cluster and needs to be investigated. Graylog will write
               into the local disk journal. Read how to fix this in {' '}
               <DocumentationLink page={DocsHelper.PAGES.ES_CLUSTER_STATUS_RED} text="the Elasticsearch setup documentation." />
@@ -94,10 +94,10 @@ class NotificationsFactory {
         };
       case 'es_unavailable':
         return {
-          title: 'Elasticsearch cluster unavailable',
+          title: 'tbSyslog cluster unavailable',
           description: (
             <span>
-              Graylog could not successfully connect to the Elasticsearch cluster. If you're using multicast, check that
+              Graylog could not successfully connect to the tbSyslog cluster. If you're using multicast, check that
               it is working in your network and that Elasticsearch is accessible. Also check that the cluster name setting
               is correct. Read how to fix this in {' '}
               <DocumentationLink page={DocsHelper.PAGES.ES_CLUSTER_UNAVAILABLE}
@@ -162,7 +162,7 @@ class NotificationsFactory {
           description: (
             <span>
               Some messages were deleted from the Graylog journal before they could be written to Elasticsearch. Please
-              verify that your Elasticsearch cluster is healthy and fast enough. You may also want to review your Graylog
+              verify that your tbSyslog cluster is healthy and fast enough. You may also want to review your Graylog
               journal settings and set a higher limit. (Node: <em>{notification.node_id}</em>)
             </span>
           ),
@@ -172,7 +172,7 @@ class NotificationsFactory {
           title: 'Journal utilization is too high',
           description: (
             <span>
-              Journal utilization is too high and may go over the limit soon. Please verify that your Elasticsearch cluster
+              Journal utilization is too high and may go over the limit soon. Please verify that your tbSyslog cluster
               is healthy and fast enough. You may also want to review your Graylog journal settings and set a higher limit.
               (Node: <em>{notification.node_id}</em>)
             </span>
@@ -216,13 +216,13 @@ class NotificationsFactory {
         };
       case 'outdated_version':
         return {
-          title: 'You are running an outdated Graylog version.',
-          description: (
-            <span>
-              The most recent stable Graylog version is <em>{notification.details.current_version}</em>.
-              Get it from <a href="https://www.graylog.org/" target="_blank">https://www.graylog.org/</a>.
-            </span>
-          ),
+          // title: 'You are running an outdated Graylog version.',
+          // description: (
+          //   <span>
+          //     The most recent stable Graylog version is <em>{notification.details.current_version}</em>.
+          //     Get it from <a href="https://www.graylog.org/" target="_blank">https://www.graylog.org/</a>.
+          //   </span>
+          // ),
         };
       case 'output_disabled':
         return {
