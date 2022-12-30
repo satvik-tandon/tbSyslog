@@ -78,7 +78,7 @@ public class LoggersResource extends RestResource {
     private static final String MEMORY_APPENDER_NAME = "graylog-internal-logs";
 
     private static final Map<String, Subsystem> SUBSYSTEMS = ImmutableMap.<String, Subsystem>of(
-            "graylog", new Subsystem("Graylog", ImmutableList.of("org.graylog2", "org.graylog"), "All messages from Graylog-owned systems."),
+            "graylog", new Subsystem("tbSyslog", ImmutableList.of("org.graylog2", "org.graylog"), "All messages from tbSyslog-owned systems."),
             "indexer", new Subsystem("Indexer", "org.elasticsearch", "All messages related to indexing and searching."),
             "authentication", new Subsystem("Authentication", "org.apache.shiro", "All user authentication messages."),
             "sockets", new Subsystem("Sockets", "netty", "All messages related to socket communication."));

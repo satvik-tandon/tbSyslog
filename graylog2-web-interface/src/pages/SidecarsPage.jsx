@@ -29,11 +29,11 @@ import Routes from 'routing/Routes';
 const SidecarsPage = () => {
   const [sidecarUser, setSidecarUser] = useState();
   const currentUser = useContext(CurrentUserContext);
-  const canCreateSidecarUserTokens = isPermitted(currentUser?.permissions, ['users:tokenlist:graylog-sidecar']);
+  const canCreateSidecarUserTokens = isPermitted(currentUser?.permissions, ['users:tokenlist:tbSyslog-sidecar']);
 
   useEffect(() => {
     if (canCreateSidecarUserTokens) {
-      UsersDomain.loadByUsername('graylog-sidecar').then(setSidecarUser);
+      UsersDomain.loadByUsername('tbSyslog-sidecar').then(setSidecarUser);
     }
   }, [canCreateSidecarUserTokens]);
 
