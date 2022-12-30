@@ -47,7 +47,6 @@ import {
   EditEventNotificationPage,
   EditContentPackPage,
   EditExtractorsPage,
-  EnterprisePage,
   EventDefinitionsPage,
   EventNotificationsPage,
   EventsPage,
@@ -289,7 +288,6 @@ const AppRouter = () => {
                         <Route exact path={Routes.SYSTEM.OVERVIEW} component={SystemOverviewPage} />
                         <Route exact path={Routes.SYSTEM.PROCESSBUFFERDUMP(':nodeId')} component={ProcessBufferDumpPage} />
                         <Route exact path={Routes.SYSTEM.THREADDUMP(':nodeId')} component={ThreadDumpPage} />
-                        <Route exact path={Routes.SYSTEM.ENTERPRISE} component={EnterprisePage} />
 
                         <Route exact path={Routes.SYSTEM.SIDECARS.OVERVIEW} component={SidecarsPage} />
                         <Route exact path={Routes.SYSTEM.SIDECARS.STATUS(':sidecarId')} component={SidecarStatusPage} />
