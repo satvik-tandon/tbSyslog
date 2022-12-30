@@ -110,7 +110,7 @@ const IndexSetsComponent = createReactClass({
     let { description } = indexSet;
 
     if (indexSet.default) {
-      description += `${description.endsWith('.') ? '' : '.'} Graylog will use this index set by default.`;
+      description += `${description.endsWith('.') ? '' : '.'} tbSyslog will use this index set by default.`;
     }
 
     let statsString;

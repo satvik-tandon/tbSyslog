@@ -29,15 +29,11 @@ class IndicesPage extends React.Component {
     const pageHeader = (
       <PageHeader title="Indices & Index Sets">
         <span>
-          A Graylog stream write messages to an index set, which is a configuration for retention, sharding, and
+          A tbSyslog stream write messages to an index set, which is a configuration for retention, sharding, and
           replication of the stored data.
           By configuring index sets, you could, for example, have different retention times for certain streams.
         </span>
 
-        <span>
-          You can learn more about the index model in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.INDEX_MODEL} text="documentation" />
-        </span>
 
         <span>
           <LinkContainer to={Routes.SYSTEM.INDEX_SETS.CREATE}>

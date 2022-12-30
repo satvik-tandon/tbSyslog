@@ -37,7 +37,7 @@ const GeoIpResolverConfig = createReactClass({
       config: {
         enabled: false,
         db_type: 'MAXMIND_CITY',
-        db_path: '/etc/graylog/server/GeoLite2-City.mmdb',
+        db_path: '/etc/tbsyslog/server/GeoLite2-City.mmdb',
         run_before_extractors: false,
       },
     };
@@ -121,7 +121,7 @@ const GeoIpResolverConfig = createReactClass({
         <p>
           The Geo-Location Processor plugin scans all messages for fields containing <strong>exclusively</strong> an
           IP address, and puts their geo-location information (coordinates, ISO country code, and city name) into
-          different fields. Read more in the <DocumentationLink page="geolocation.html" text="Graylog documentation" />.
+          different fields.
         </p>
 
         <dl className="deflist">
