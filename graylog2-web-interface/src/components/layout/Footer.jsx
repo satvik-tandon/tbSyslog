@@ -46,35 +46,35 @@ const StyledFooter: StyledComponent<{}, ThemeInterface, HTMLElement> = styled.fo
 `);
 
 const Footer = ({ system }: Props) => {
-  // const [jvm, setJvm] = useState();
+  const [jvm, setJvm] = useState();
 
-  // useEffect(() => {
-  //   let mounted = true;
+  useEffect(() => {
+    let mounted = true;
 
-  //   SystemStore.jvm().then((jvmInfo) => {
-  //     if (mounted) {
-  //       setJvm(jvmInfo);
-  //     }
-  //   });
+    SystemStore.jvm().then((jvmInfo) => {
+      if (mounted) {
+        setJvm(jvmInfo);
+      }
+    });
 
-  //   return () => {
-  //     mounted = false;
-  //   };
-  // }, []);
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
-  // if (!(system && jvm)) {
-  //   return (
-  //     <StyledFooter>
-  //       Graylog {Version.getFullVersion()}
-  //     </StyledFooter>
-  //   );
-  // }
+  if (!(system && jvm)) {
+    return (
+      <StyledFooter>
+        {/* Graylog {Version.getFullVersion()} */}
+      </StyledFooter>
+    );
+  }
 
-  // return (
-  //   <StyledFooter>
-  //     Graylog {system.version} on {system.hostname} ({jvm.info})
-  //   </StyledFooter>
-  // );
+  return (
+    <StyledFooter>
+      {/* Graylog {system.version} on {system.hostname} ({jvm.info}) */}
+    </StyledFooter>
+  );
 };
 
 Footer.propTypes = {
