@@ -15,7 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 // @flow strict
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { type StyledComponent, css } from 'styled-components';
 
@@ -89,3 +89,4 @@ Footer.defaultProps = {
 };
 
 export default connect(Footer, { system: SystemStore }, ({ system: { system } = {} }) => ({ system }));
+*/
