@@ -71,10 +71,8 @@ const AuthenticationBackendDetailsPage = ({ params: { backendId } }: Props) => {
                         </Button>
                       </LinkContainer>
                   )}>
-          <span>Configure Graylog&apos;s authentication services of this Graylog cluster.</span>
-          <span>Read more authentication in the <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                                                                   text="documentation" />.
-          </span>
+          <span>Configure tbSyslog&apos;s authentication services of this tbSyslog cluster.</span>
+          
           <AuthenticationOverviewLinks />
         </PageHeader>
         <BackendDetails authenticationBackend={authBackend} />

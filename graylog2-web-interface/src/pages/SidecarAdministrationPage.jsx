@@ -31,12 +31,7 @@ const SidecarAdministrationPage = ({ location: { query: { node_id: nodeId } } })
     <span>
       <PageHeader title="Collectors Administration">
         <span>
-          The Graylog collectors can reliably forward contents of log files or Windows EventLog from your servers.
-        </span>
-
-        <span>
-          Read more about collectors and how to set them up in the
-          {' '}<DocumentationLink page={DocsHelper.PAGES.COLLECTOR} text="Graylog documentation" />.
+          The tbSyslog collectors can reliably forward contents of log files or Windows EventLog from your servers.
         </span>
 
         <ButtonToolbar>

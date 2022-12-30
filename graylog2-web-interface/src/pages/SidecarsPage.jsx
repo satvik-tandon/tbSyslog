@@ -42,17 +42,13 @@ const SidecarsPage = () => {
       <span>
         <PageHeader title="Sidecars Overview">
           <span>
-            The Graylog sidecars can reliably forward contents of log files or Windows EventLog from your servers.
+            The tbSyslog sidecars can reliably forward contents of log files or Windows EventLog from your servers.
           </span>
 
           {canCreateSidecarUserTokens && (
             <>
               {sidecarUser ? (
                 <span>
-                  Do you need an API token for a sidecar?&ensp;
-                  <Link to={Routes.SYSTEM.USERS.TOKENS.edit(sidecarUser.id)}>
-                    Create or reuse a token for the <em>graylog-sidecar</em> user
-                  </Link>
                 </span>
               ) : <Spinner />}
             </>

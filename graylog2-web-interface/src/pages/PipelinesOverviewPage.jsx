@@ -32,9 +32,6 @@ const PipelinesOverviewPage = () => (
           Pipelines let you transform and process messages coming from streams. Pipelines consist of stages where
           rules are evaluated and applied. Messages can go through one or more stages.
         </span>
-        <span>
-          Read more about Graylog pipelines in the <DocumentationLink page={DocsHelper.PAGES.PIPELINES} text="documentation" />.
-        </span>
 
         <span>
           <LinkContainer to={Routes.SYSTEM.PIPELINES.OVERVIEW}>
