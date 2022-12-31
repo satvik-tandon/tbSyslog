@@ -87,17 +87,6 @@ const Navigation = ({ location }: Props) => {
   const { permissions, full_name: fullName, read_only: readOnly, id: userId } = currentUser || {};
 
   const pluginExports = PluginStore.exports('navigation');
-
-  const enterpriseMenuIsMissing = !pluginExports.find((value) => value.description.toLowerCase() === 'enterprise');
-  const isPermittedToEnterprise = isPermitted(permissions, ['licenseinfos:read']);
-
-  if (enterpriseMenuIsMissing && isPermittedToEnterprise) {
-    // no enterprise plugin menu, so we will add one
-    pluginExports.push({
-      
-    });
-  }
-
   const pluginNavigations = pluginExports
     .sort((route1, route2) => naturalSort(route1.description.toLowerCase(), route2.description.toLowerCase()))
     .map((pluginRoute) => formatPluginRoute(pluginRoute, permissions, location));
