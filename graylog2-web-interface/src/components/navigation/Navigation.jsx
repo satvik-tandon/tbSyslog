@@ -88,15 +88,7 @@ const Navigation = ({ location }: Props) => {
 
   const pluginExports = PluginStore.exports('navigation');
 
-  const enterpriseMenuIsMissing = !pluginExports.find((value) => value.description.toLowerCase() === 'enterprise');
-  const isPermittedToEnterprise = isPermitted(permissions, ['licenseinfos:read']);
-
-  if (enterpriseMenuIsMissing && isPermittedToEnterprise) {
-    // no enterprise plugin menu, so we will add one
-    pluginExports.push({
-      path: Routes.SYSTEM.ENTERPRISE,
-      description: 'helloworld',
-    });
+ 
   }
 
   const pluginNavigations = pluginExports
