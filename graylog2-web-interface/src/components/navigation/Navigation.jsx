@@ -88,7 +88,9 @@ const Navigation = ({ location }: Props) => {
 
   const pluginExports = PluginStore.exports('navigation');
 
- 
+  const enterpriseMenuIsMissing = !pluginExports.find((value) => value.description.toLowerCase() === 'enterprise');
+  const isPermittedToEnterprise = isPermitted(permissions, ['licenseinfos:read']);
+
   }
 
   const pluginNavigations = pluginExports
