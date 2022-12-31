@@ -65,9 +65,7 @@ class SimulatorPage extends React.Component {
               Processing messages can be complex. Use this page to simulate the result of processing an incoming
               message using your current set of pipelines and rules.
             </span>
-            <span>
-              Read more about Graylog pipelines in the <DocumentationLink page={DocsHelper.PAGES.PIPELINES} text="documentation" />.
-            </span>
+           
 
             <span>
               <LinkContainer to={Routes.SYSTEM.PIPELINES.OVERVIEW}>

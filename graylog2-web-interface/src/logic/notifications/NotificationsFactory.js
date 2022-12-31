@@ -26,11 +26,11 @@ class NotificationsFactory {
     switch (notification.type) {
       case 'check_server_clocks':
         return {
-          title: 'Check the system clocks of your Graylog server nodes.',
+          title: 'Check the system clocks of your tbSyslog server nodes.',
           description: (
             <span>
-              A Graylog server node detected a condition where it was deemed to be inactive immediately after being active.
-              This usually indicates either a significant jump in system time, e.g. via NTP, or that a second Graylog server node
+              A tbSyslog server node detected a condition where it was deemed to be inactive immediately after being active.
+              This usually indicates either a significant jump in system time, e.g. via NTP, or that a second tbSyslog server node
               is active on a system that has a different system time. Please make sure that the clocks of graylog2 systems are synchronized.
             </span>
           ),
@@ -52,7 +52,7 @@ class NotificationsFactory {
           description: (
             <span>
               The configuration for the email transport subsystem has shown to be missing or invalid.
-              Please check the related section of your Graylog server configuration file.
+              Please check the related section of your tbSyslog server configuration file.
               This is the detailed error message: {notification.details.exception}
             </span>
           ),
@@ -62,7 +62,7 @@ class NotificationsFactory {
           title: 'An error occurred while trying to send an email!',
           description: (
             <span>
-              The Graylog server encountered an error while trying to send an email.
+              The tbSyslog server encountered an error while trying to send an email.
               This is the detailed error message: {notification.details.exception}
             </span>
           ),
@@ -73,22 +73,20 @@ class NotificationsFactory {
           description: (
             <span>
               The tbSyslog cluster state is RED which means shards are unassigned.
-              This usually indicates a crashed and corrupt cluster and needs to be investigated. Graylog will write
-              into the local disk journal. Read how to fix this in {' '}
-              <DocumentationLink page={DocsHelper.PAGES.ES_CLUSTER_STATUS_RED} text="the Elasticsearch setup documentation." />
+              This usually indicates a crashed and corrupt cluster and needs to be investigated. tbSyslog will write
+              into the local disk journal. 
             </span>
           ),
         };
       case 'es_open_files':
         return {
-          title: 'Elasticsearch nodes with too low open file limit',
+          title: 'tbSyslog nodes with too low open file limit',
           description: (
             <span>
-              There are Elasticsearch nodes in the cluster that have a too low open file limit (current limit:{' '}
+              There are tbSyslog nodes in the cluster that have a too low open file limit (current limit:{' '}
               <em>{notification.details.max_file_descriptors}</em> on <em>{notification.details.hostname}</em>;
               should be at least 64000) This will be causing problems
-              that can be hard to diagnose. Read how to raise the maximum number of open files in {' '}
-              <DocumentationLink page={DocsHelper.PAGES.ES_OPEN_FILE_LIMITS} text="the Elasticsearch setup documentation" />.
+              that can be hard to diagnose.
             </span>
           ),
         };
@@ -97,11 +95,9 @@ class NotificationsFactory {
           title: 'tbSyslog cluster unavailable',
           description: (
             <span>
-              Graylog could not successfully connect to the tbSyslog cluster. If you're using multicast, check that
-              it is working in your network and that Elasticsearch is accessible. Also check that the cluster name setting
-              is correct. Read how to fix this in {' '}
-              <DocumentationLink page={DocsHelper.PAGES.ES_CLUSTER_UNAVAILABLE}
-                                 text="the Elasticsearch setup documentation." />
+              tbSyslog could not successfully connect to the tbSyslog cluster. If you're using multicast, check that
+              it is working in your network and that tbSyslog is accessible. Also check that the cluster name setting
+              is correct.
             </span>
           ),
         };
@@ -110,7 +106,7 @@ class NotificationsFactory {
           title: 'Nodes with too long GC pauses',
           description: (
             <span>
-              There are Graylog nodes on which the garbage collector runs too long.
+              There are tbSyslog nodes on which the garbage collector runs too long.
               Garbage collection runs should be as short as possible. Please check whether those nodes are healthy.
               (Node: <em>{notification.node_id}</em>, GC duration: <em>{notification.details.gc_duration_ms} ms</em>,
               GC threshold: <em>{notification.details.gc_threshold_ms} ms</em>)
@@ -161,8 +157,8 @@ class NotificationsFactory {
           title: 'Uncommited messages deleted from journal',
           description: (
             <span>
-              Some messages were deleted from the Graylog journal before they could be written to Elasticsearch. Please
-              verify that your tbSyslog cluster is healthy and fast enough. You may also want to review your Graylog
+              Some messages were deleted from the tbSyslog journal before they could be written to tbSyslog. Please
+              verify that your tbSyslog cluster is healthy and fast enough. You may also want to review your tbSyslog
               journal settings and set a higher limit. (Node: <em>{notification.node_id}</em>)
             </span>
           ),
@@ -173,19 +169,19 @@ class NotificationsFactory {
           description: (
             <span>
               Journal utilization is too high and may go over the limit soon. Please verify that your tbSyslog cluster
-              is healthy and fast enough. You may also want to review your Graylog journal settings and set a higher limit.
+              is healthy and fast enough. You may also want to review your tbSyslog journal settings and set a higher limit.
               (Node: <em>{notification.node_id}</em>)
             </span>
           ),
         };
       case 'multi_master':
         return {
-          title: 'Multiple Graylog server masters in the cluster',
+          title: 'Multiple tbSyslog server masters in the cluster',
           description: (
             <span>
-              There were multiple Graylog server instances configured as master in your Graylog cluster. The cluster handles
+              There were multiple tbSyslog server instances configured as master in your tbSyslog cluster. The cluster handles
               this automatically by launching new nodes as slaves if there already is a master but you should still fix this.
-              Check the graylog.conf of every node and make sure that only one instance has is_master set to true. Close this
+              Check the tbSyslog.conf of every node and make sure that only one instance has is_master set to true. Close this
               notification if you think you resolved the problem. It will pop back up if you start a second master node again.
             </span>
           ),
@@ -203,11 +199,11 @@ class NotificationsFactory {
         };
       case 'no_master':
         return {
-          title: 'There was no master Graylog server node detected in the cluster.',
+          title: 'There was no master tbSyslog server node detected in the cluster.',
           description: (
             <span>
-              Certain operations of Graylog server require the presence of a master node, but no such master was started.
-              Please ensure that one of your Graylog server nodes contains the setting <code>is_master = true</code> in its
+              Certain operations of tbSyslog server require the presence of a master node, but no such master was started.
+              Please ensure that one of your tbSyslog server nodes contains the setting <code>is_master = true</code> in its
               configuration and that it is running. Until this is resolved index cycling will not be able to run, which
               means that the index retention mechanism is also not running, leading to increased index sizes. Certain
               maintenance functions as well as a variety of web interface pages (e.g. Dashboards) are unavailable.
@@ -216,10 +212,10 @@ class NotificationsFactory {
         };
       case 'outdated_version':
         return {
-          // title: 'You are running an outdated Graylog version.',
+          // title: 'You are running an outdated tbSyslog version.',
           // description: (
           //   <span>
-          //     The most recent stable Graylog version is <em>{notification.details.current_version}</em>.
+          //     The most recent stable tbSyslog version is <em>{notification.details.current_version}</em>.
           //     Get it from <a href="https://www.graylog.org/" target="_blank">https://www.graylog.org/</a>.
           //   </span>
           // ),
@@ -257,64 +253,54 @@ class NotificationsFactory {
               The processing of stream <em>{notification.details.stream_title} ({notification.details.stream_id})</em> has taken too long for{' '}
               {notification.details.fault_count} times. To protect the stability of message processing,
               this stream has been disabled. Please correct the stream rules and reenable the stream.
-              Check <DocumentationLink page={DocsHelper.PAGES.STREAM_PROCESSING_RUNTIME_LIMITS} text="the documentation" />{' '}
-              for more details.
             </span>
           ),
         };
       case 'es_node_disk_watermark_low':
         return {
-          title: 'Elasticsearch nodes disk usage above low watermark',
+          title: 'tbSyslog nodes disk usage above low watermark',
           description: (
             <span>
-              There are Elasticsearch nodes in the cluster running out of disk space, their disk usage is above the low watermark.{' '}
-              For this reason Elasticsearch will not allocate new shards to the affected nodes.{' '}
-              The affected nodes are: [{notification.details.nodes}]{' '}
-              Check <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html</a>{' '}
-              for more details.
+              There are tbSyslog nodes in the cluster running out of disk space, their disk usage is above the low watermark.{' '}
+              For this reason tbSyslog will not allocate new shards to the affected nodes.{' '}
+              The affected nodes are: [{notification.details.nodes}]
             </span>
           ),
         };
       case 'es_node_disk_watermark_high':
         return {
-          title: 'Elasticsearch nodes disk usage above high watermark',
+          title: 'tbSyslog nodes disk usage above high watermark',
           description: (
             <span>
-              There are Elasticsearch nodes in the cluster with almost no free disk, their disk usage is above the high watermark.{' '}
-              For this reason Elasticsearch will attempt to relocate shards away from the affected nodes.{' '}
-              The affected nodes are: [{notification.details.nodes}]{' '}
-              Check <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html</a>{' '}
-              for more details.
+              There are tbSyslog nodes in the cluster with almost no free disk, their disk usage is above the high watermark.{' '}
+              For this reason tbSyslog will attempt to relocate shards away from the affected nodes.{' '}
+              The affected nodes are: [{notification.details.nodes}]
             </span>
           ),
         };
       case 'es_node_disk_watermark_flood_stage':
         return {
-          title: 'Elasticsearch nodes disk usage above flood stage watermark',
+          title: 'tbSyslog nodes disk usage above flood stage watermark',
           description: (
             <span>
-              There are Elasticsearch nodes in the cluster without free disk, their disk usage is above the flood stage watermark.{' '}
-              For this reason Elasticsearch enforces a read-only index block on all indexes having any of their shards in any of the{' '}
-              affected nodes. The affected nodes are: [{notification.details.nodes}]{' '}
-              Check <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html</a>{' '}
-              for more details.
+              There are tbSyslog nodes in the cluster without free disk, their disk usage is above the flood stage watermark.{' '}
+              For this reason tbSyslog enforces a read-only index block on all indexes having any of their shards in any of the{' '}
+              affected nodes. The affected nodes are: [{notification.details.nodes}]
             </span>
           ),
         };
       case 'es_version_mismatch':
         const { initial_version: initialVersion, current_version: currentVersion } = notification.details;
         return {
-          title: 'Elasticsearch version is incompatible',
+          title: 'tbSyslog version is incompatible',
           description:(
             <span>
-              The Elasticsearch version which is currently running ({currentVersion}) has a different major version than
-              the one the Graylog master node was started with ({initialVersion}).{' '}
-              This will most probably result in errors during indexing or searching. Graylog requires a full restart after an
-              Elasticsearch upgrade from one major version to another.
+              The tbSyslog version which is currently running ({currentVersion}) has a different major version than
+              the one the tbSyslog master node was started with ({initialVersion}).{' '}
+              This will most probably result in errors during indexing or searching. tbSyslog requires a full restart after an
+              tbSyslog upgrade from one major version to another.
               <br />
-              For details, please see our notes about{' '}
-              <DocumentationLink page={DocsHelper.PAGES.ROLLING_ES_UPGRADE}
-                                 text="rolling Elasticsearch upgrades." />
+              
 
             </span>
           ),
@@ -335,8 +321,6 @@ class NotificationsFactory {
               to log in again!</strong>
               <br />
               <br />
-              Please check the <DocumentationLink page={DocsHelper.PAGES.UPGRADE_GUIDE} text="upgrade guide" />
-              for more details.
             </span>
           ),
         }

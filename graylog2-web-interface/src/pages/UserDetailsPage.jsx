@@ -62,11 +62,7 @@ const UserDetailsPage = ({ params }: Props) => {
           Overview of details like profile information, settings, teams and roles.
         </span>
 
-        <span>
-          Learn more in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                             text="documentation" />
-        </span>
+        
 
         <UserOverviewLinks />
       </PageHeader>

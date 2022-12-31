@@ -107,11 +107,6 @@ const UserEditPage = ({ params }: Props) => {
           You can create new tokens or delete old ones.
         </span>
 
-        <span>
-          Learn more in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                             text="documentation" />
-        </span>
 
         <UserOverviewLinks />
       </PageHeader>

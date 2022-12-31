@@ -34,10 +34,6 @@ const SidecarConfigurationPage = () => (
           manage the Sidecar configurations.
         </span>
 
-        <span>
-          Read more about the collector sidecar in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.COLLECTOR_SIDECAR} text="Graylog documentation" />.
-        </span>
 
         <ButtonToolbar>
           <LinkContainer to={Routes.SYSTEM.SIDECARS.OVERVIEW}>

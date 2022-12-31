@@ -116,10 +116,7 @@ const SearchBar = ({ availableStreams, config, currentQuery, disableSearch = def
 
                 <Row className="no-bm">
                   <Col md={9} xs={8}>
-                    <div className="pull-right search-help">
-                      <DocumentationLink page={DocsHelper.PAGES.SEARCH_QUERY_LANGUAGE}
-                                         title="Search query syntax documentation"
-                                         text={<Icon name="lightbulb" />} />
+                    <div>
                     </div>
                     <SearchButton running={isSubmitting}
                                   disabled={disableSearch || isSubmitting || !isValid}

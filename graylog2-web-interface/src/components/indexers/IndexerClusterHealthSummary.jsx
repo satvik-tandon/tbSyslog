@@ -77,7 +77,6 @@ class IndexerClusterHealthSummary extends React.Component {
         {health.shards.initializing} initializing,{' '}
         {health.shards.relocating} relocating,{' '}
         {health.shards.unassigned} unassigned,{' '}
-        <DocumentationLink page={DocsHelper.PAGES.CLUSTER_STATUS_EXPLAINED} text="What does this mean?" />
       </ESClusterStatus>
     );
   }

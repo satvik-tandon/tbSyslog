@@ -46,14 +46,10 @@ const NewAlertConditionPage = createReactClass({
         <div>
           <PageHeader title="New alert condition">
             <span>
-              Define an alert condition and configure the way Graylog will notify you when that condition is satisfied.
+              Define an alert condition and configure the way tbSyslog will notify you when that condition is satisfied.
             </span>
 
-            <span>
-              Are the default conditions not flexible enough? You can write your own! Read more about alerting in
-              the{' '}
-              <DocumentationLink page={DocsHelper.PAGES.ALERTS} text="documentation" />.
-            </span>
+            
 
             <span>
               <AlertsHeaderToolbar active={Routes.LEGACY_ALERTS.CONDITIONS} />

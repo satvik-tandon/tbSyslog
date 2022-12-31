@@ -60,11 +60,6 @@ const RoleEditPage = ({ params }: Props) => {
         <span>
           You can assign the role to users.
         </span>
-        <span>
-          Learn more in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                             text="documentation" />
-        </span>
         <LinkContainer to={Routes.SYSTEM.AUTHZROLES.OVERVIEW}>
           <Button bsStyle="info">Roles Overview</Button>
         </LinkContainer>

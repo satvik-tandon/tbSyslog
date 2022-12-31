@@ -61,9 +61,6 @@ class StreamAlertsOverviewPage extends React.Component {
               <em>{stream.title}</em>.
             </span>
 
-            <span>
-              Read more about alerting in the <DocumentationLink page={DocsHelper.PAGES.ALERTS} text="documentation" />.
-            </span>
 
             <ButtonToolbar>
               <LinkContainer to={Routes.STREAMS}>

@@ -83,8 +83,7 @@ class RegexExtractorConfiguration extends React.Component {
   render() {
     const helpMessage = (
       <span>
-        The regular expression used for extraction. First matcher group is used.{' '}
-        Learn more in the <DocumentationLink page={DocsHelper.PAGES.EXTRACTORS} text="documentation" />.
+        The regular expression used for extraction. First matcher group is used.
       </span>
     );
 

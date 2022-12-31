@@ -35,15 +35,11 @@ const UserCreatePage = () => (
                   </LinkContainer>
                 )}>
       <span>
-        Use this page to create new Graylog users. The users and their permissions created here are not limited
-        to the web interface but valid and required for the REST APIs of your Graylog server nodes, too.
+        Use this page to create new tbSyslog users. The users and their permissions created here are not limited
+        to the web interface but valid and required for the REST APIs of your tbSyslog server nodes, too.
       </span>
 
-      <span>
-        Learn more in the{' '}
-        <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                           text="documentation" />
-      </span>
+      
 
       <UserOverviewLinks />
     </PageHeader>

@@ -60,11 +60,7 @@ const RoleDetailsPage = ({ params }: Props) => {
         <span>
           Overview of details like name, description and assigned users.
         </span>
-        <span>
-          Learn more in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                             text="documentation" />
-        </span>
+        
         <LinkContainer to={Routes.SYSTEM.AUTHZROLES.OVERVIEW}>
           <Button bsStyle="info">Roles Overview</Button>
         </LinkContainer>

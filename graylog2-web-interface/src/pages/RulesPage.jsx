@@ -46,14 +46,11 @@ const RulesPage = createReactClass({
         <span>
           <PageHeader title="Pipeline Rules">
             <span>
-              Rules are a way of applying changes to messages in Graylog. A rule consists of a condition and a list of actions.
-              Graylog evaluates the condition against a message and executes the actions if the condition is satisfied.
+              Rules are a way of applying changes to messages in tbSyslog. A rule consists of a condition and a list of actions.
+              tbSyslog evaluates the condition against a message and executes the actions if the condition is satisfied.
             </span>
 
-            <span>
-              Read more about Graylog pipeline rules in the <DocumentationLink page={DocsHelper.PAGES.PIPELINE_RULES}
-                                                                               text="documentation" />.
-            </span>
+            
 
             <span>
               <LinkContainer to={Routes.SYSTEM.PIPELINES.OVERVIEW}>

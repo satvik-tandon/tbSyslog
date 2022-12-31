@@ -72,9 +72,6 @@ const StreamsPage = createReactClass({
               the rules of a stream are routed into it. A message can also be routed into multiple streams.
             </span>
 
-            <span>
-              Read more about streams in the <DocumentationLink page={DocsHelper.PAGES.STREAMS} text="documentation" />.
-            </span>
 
             <IfPermitted permissions="streams:create">
               <CreateStreamButton bsSize="large"

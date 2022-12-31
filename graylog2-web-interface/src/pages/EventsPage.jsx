@@ -38,9 +38,7 @@ const EventsPage = ({ location }) => {
             to create Alerts.
           </span>
           <span>
-            Graylog&apos;s new Alerting system let you define more flexible and powerful rules. Learn more in the{' '}
-            <DocumentationLink page={DocsHelper.PAGES.ALERTS}
-                               text="documentation" />
+            tbSyslog&apos;s new Alerting system let you define more flexible and powerful rules.
           </span>
 
           <ButtonToolbar>

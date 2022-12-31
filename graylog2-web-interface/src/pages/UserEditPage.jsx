@@ -69,11 +69,6 @@ const UserEditPage = ({ params }: Props) => {
           You can change the user details and password here and assign roles and teams.
         </span>
 
-        <span>
-          Learn more in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                             text="documentation" />
-        </span>
 
         <UserOverviewLinks />
       </PageHeader>

@@ -108,10 +108,6 @@ const CreateExtractorsPage = createReactClass({
               transform any text data into fields that allow you easy filtering and analysis later on.
             </span>
 
-            <span>
-              Find more information about extractors in the
-              {' '}<DocumentationLink page={DocsHelper.PAGES.EXTRACTORS} text="documentation" />.
-            </span>
           </PageHeader>
           <EditExtractor action="create"
                          extractor={extractor}

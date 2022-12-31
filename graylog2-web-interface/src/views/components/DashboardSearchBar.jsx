@@ -76,10 +76,7 @@ const DashboardSearchBar = ({ config, globalOverride, disableSearch = false, onE
 
                 <Row className="no-bm">
                   <Col md={8} lg={9}>
-                    <div className="pull-right search-help">
-                      <DocumentationLink page={DocsHelper.PAGES.SEARCH_QUERY_LANGUAGE}
-                                         title="Search query syntax documentation"
-                                         text={<Icon name="lightbulb" />} />
+                    <div >
                     </div>
                     <SearchButton running={isSubmitting}
                                   disabled={disableSearch || isSubmitting || !isValid}

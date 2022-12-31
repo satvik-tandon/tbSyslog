@@ -92,10 +92,6 @@ const ExtractorsPage = createReactClass({
               as <em>http_response_code</em> to the message.
             </span>
 
-            <span>
-              Find more information about extractors in the
-              {' '}<DocumentationLink page={DocsHelper.PAGES.EXTRACTORS} text="documentation" />.
-            </span>
 
             <DropdownButton bsStyle="info" bsSize="large" id="extractor-actions-dropdown" title="Actions" pullRight>
               <LinkContainer to={Routes.import_extractors(node.node_id, input.id)}>

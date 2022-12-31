@@ -74,14 +74,12 @@ const ShowEventDefinitionPage = ({ params: { notificationId } }) => {
       <span>
         <PageHeader title={`View "${notification.title}" Notification`} subactions={notification && <EventNotificationActionLinks notificationId={notification.id} />}>
           <span>
-            Notifications alert you of any configured Event when they occur. Graylog can send Notifications directly
+            Notifications alert you of any configured Event when they occur. tbSyslog can send Notifications directly
             to you or to other systems you use for that purpose.
           </span>
 
           <span>
-            Graylog&apos;s new Alerting system let you define more flexible and powerful rules. Learn more in the{' '}
-            <DocumentationLink page={DocsHelper.PAGES.ALERTS}
-                               text="documentation" />
+            tbSyslog&apos;s new Alerting system let you define more flexible and powerful rules.
           </span>
 
           <ButtonToolbar>

@@ -31,11 +31,6 @@ const AuthenticatorsPage = () => (
         Configure the trusted header authentication.
       </span>
 
-      <span>
-        Learn more in the{' '}
-        <DocumentationLink page={DocsHelper.PAGES.AUTHENTICATORS}
-                           text="documentation" />
-      </span>
 
       <AuthenticationOverviewLinks />
 
