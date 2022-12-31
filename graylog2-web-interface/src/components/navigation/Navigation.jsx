@@ -94,8 +94,7 @@ const Navigation = ({ location }: Props) => {
   if (enterpriseMenuIsMissing && isPermittedToEnterprise) {
     // no enterprise plugin menu, so we will add one
     pluginExports.push({
-      path: Routes.SYSTEM.ENTERPRISE,
-      description: 'helloworld',
+      
     });
   }
 
