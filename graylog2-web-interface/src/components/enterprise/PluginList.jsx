@@ -26,7 +26,7 @@ const PluginList = createReactClass({
   displayName: 'PluginList',
 
   ENTERPRISE_PLUGINS: {
-    'graylog-plugin-enterprise': 'Graylog Plugin Enterprise',
+    'graylog-plugin-enterprise': 'tbSyslog Plugin Enterprise',
   },
 
   _formatPlugin(pluginName) {
@@ -45,7 +45,7 @@ const PluginList = createReactClass({
 
     return (
       <>
-        <p>This is the status of Graylog Enterprise modules in this cluster:</p>
+        <p>This is the status of tbSyslog Enterprise modules in this cluster:</p>
         <ul className={style.enterprisePlugins}>
           {enterprisePluginList}
         </ul>

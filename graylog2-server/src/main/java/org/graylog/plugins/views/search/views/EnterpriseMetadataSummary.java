@@ -30,12 +30,12 @@ public class EnterpriseMetadataSummary extends PluginMetadataSummary {
 
     @Override
     public String name() {
-        return "Graylog Enterprise";
+        return "tbSyslog";
     }
 
     @Override
     public String author() {
-        return "Graylog, Inc.";
+        return "tbSyslog";
     }
 
     @Override
@@ -50,7 +50,7 @@ public class EnterpriseMetadataSummary extends PluginMetadataSummary {
 
     @Override
     public String description() {
-        return "Graylog Enterprise";
+        return "tbSyslog";
     }
 
     @Override
