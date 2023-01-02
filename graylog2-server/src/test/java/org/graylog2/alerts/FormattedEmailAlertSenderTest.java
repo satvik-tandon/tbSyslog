@@ -79,7 +79,7 @@ public class FormattedEmailAlertSenderTest {
         when(checkResult.getResultDescription()).thenReturn("This is the alert description.");
         String subject = emailAlertSender.buildSubject(stream, checkResult, Collections.<Message>emptyList());
 
-        assertThat(subject).isEqualTo("Graylog alert for stream: Stream Title: This is the alert description.");
+        assertThat(subject).isEqualTo("tbSyslog alert for stream: Stream Title: This is the alert description.");
     }
 
     @Test
@@ -165,7 +165,7 @@ public class FormattedEmailAlertSenderTest {
 
         String body = emailAlertSender.buildBody(stream, checkResult, Collections.<Message>emptyList());
 
-        assertThat(body).contains("Stream URL: Please configure 'transport_email_web_interface_url' in your Graylog configuration file.");
+        assertThat(body).contains("Stream URL: Please configure 'transport_email_web_interface_url' in your tbSyslog configuration file.");
     }
 
     @Test
@@ -190,7 +190,7 @@ public class FormattedEmailAlertSenderTest {
 
         String body = emailAlertSender.buildBody(stream, checkResult, Collections.<Message>emptyList());
 
-        assertThat(body).contains("Stream URL: Please configure 'transport_email_web_interface_url' in your Graylog configuration file.");
+        assertThat(body).contains("Stream URL: Please configure 'transport_email_web_interface_url' in your tbSyslog configuration file.");
     }
 
     @Test

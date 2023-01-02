@@ -47,7 +47,7 @@ public class RemoteInterfaceProvider {
 
                     Request.Builder builder = original.newBuilder()
                             .header(HttpHeaders.ACCEPT, MediaType.JSON_UTF_8.toString())
-                            .header(CsrfProtectionFilter.HEADER_NAME, "Graylog Server")
+                            .header(CsrfProtectionFilter.HEADER_NAME, "tbSyslog Server")
                             .method(original.method(), original.body());
 
                     if (authorizationToken != null) {

@@ -103,8 +103,8 @@ class NotificationSettingsForm extends React.Component {
                            units={TIME_UNITS}
                            clearable />
             <HelpBlock>
-              Graylog sends Notifications for Alerts every time they occur. Set a Grace Period to control how long
-              Graylog should wait before sending Notifications again. Note that Events with keys will have a Grace
+              tbSyslog sends Notifications for Alerts every time they occur. Set a Grace Period to control how long
+              tbSyslog should wait before sending Notifications again. Note that Events with keys will have a Grace
               Period for each different key value.
             </HelpBlock>
           </FormGroup>

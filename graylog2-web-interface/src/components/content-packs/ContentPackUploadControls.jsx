@@ -67,7 +67,7 @@ class ContentPackUploadControls extends React.Component {
           },
           (response) => {
             const message = 'Error importing content pack, please ensure it is a valid JSON file. Check your '
-              + 'Graylog logs for more information.';
+              + 'tbSyslog logs for more information.';
             const title = 'Could not import content pack';
             let smallMessage = '';
 

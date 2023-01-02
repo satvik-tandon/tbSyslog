@@ -107,7 +107,7 @@ class EventConditionForm extends React.Component {
           <h2 className={commonStyles.title}>Event Condition</h2>
 
           <p>
-            Configure how Graylog should create Events of this kind. You can later use those Events as input on other
+            Configure how tbSyslog should create Events of this kind. You can later use those Events as input on other
             Conditions, making it possible to build powerful Conditions based on others.
           </p>
 

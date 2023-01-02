@@ -61,7 +61,7 @@ const _validate = (values) => {
 };
 
 const UserCreate = () => {
-  const initialRole = { name: 'Reader', description: 'Grants basic permissions for every Graylog user (built-in)', id: '' };
+  const initialRole = { name: 'Reader', description: 'Grants basic permissions for every tbSyslog user (built-in)', id: '' };
   const [users, setUsers] = useState();
   const [user, setUser] = useState(User.empty().toBuilder().roles(Immutable.Set([initialRole.name])).build());
   const [submitError, setSubmitError] = useState();

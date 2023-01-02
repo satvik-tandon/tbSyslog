@@ -48,8 +48,8 @@ const ActionsSM = styled.div`
 `;
 
 const LIFECYCLE_DEFAULT_MESSAGES = {
-  experimental: 'This Graylog feature is new and should be considered experimental.',
-  legacy: 'This feature has been discontinued and will be removed in a future Graylog version.',
+  experimental: 'This tbSyslog feature is new and should be considered experimental.',
+  legacy: 'This feature has been discontinued and will be removed in a future tbSyslog version.',
 };
 
 type Props = {

@@ -110,7 +110,7 @@ public class V20161116172100_DefaultIndexSetMigrationTest {
         final IndexSetConfig capturedIndexSetConfig = indexSetConfigCaptor.getValue();
         assertThat(capturedIndexSetConfig.id()).isNull();
         assertThat(capturedIndexSetConfig.title()).isEqualTo("Default index set");
-        assertThat(capturedIndexSetConfig.description()).isEqualTo("The Graylog default index set");
+        assertThat(capturedIndexSetConfig.description()).isEqualTo("The tbSyslog default index set");
         assertThat(capturedIndexSetConfig.indexPrefix()).isEqualTo(elasticsearchConfiguration.getIndexPrefix());
         assertThat(capturedIndexSetConfig.shards()).isEqualTo(elasticsearchConfiguration.getShards());
         assertThat(capturedIndexSetConfig.replicas()).isEqualTo(elasticsearchConfiguration.getReplicas());

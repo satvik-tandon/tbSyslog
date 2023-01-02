@@ -98,16 +98,16 @@ public abstract class CmdLineTool implements CliCommand {
     protected final BaseConfiguration configuration;
     protected final ChainingClassLoader chainingClassLoader;
 
-    @Option(name = "--dump-config", description = "Show the effective Graylog configuration and exit")
+    @Option(name = "--dump-config", description = "Show the effective tbSyslog configuration and exit")
     protected boolean dumpConfig = false;
 
     @Option(name = "--dump-default-config", description = "Show the default configuration and exit")
     protected boolean dumpDefaultConfig = false;
 
-    @Option(name = {"-d", "--debug"}, description = "Run Graylog in debug mode")
+    @Option(name = {"-d", "--debug"}, description = "Run tbSyslog in debug mode")
     private boolean debug = false;
 
-    @Option(name = {"-f", "--configfile"}, description = "Configuration file for Graylog")
+    @Option(name = {"-f", "--configfile"}, description = "Configuration file for tbSyslog")
     private String configFile = "/etc/graylog/server/server.conf";
 
     protected String commandName = "command";

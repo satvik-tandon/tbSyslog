@@ -61,7 +61,7 @@ class EmailNotificationForm extends React.Component {
   static defaultConfig = {
     sender: '', // TODO: Default sender should come from the server. The default should be empty or the address configured in the email server settings
     // eslint-disable-next-line no-template-curly-in-string
-    subject: 'Graylog event notification: ${event_definition_title}', // TODO: Default subject should come from the server
+    subject: 'tbSyslog event notification: ${event_definition_title}', // TODO: Default subject should come from the server
     body_template: DEFAULT_BODY_TEMPLATE, // TODO: Default body template should come from the server
     user_recipients: [],
     email_recipients: [],
@@ -125,7 +125,7 @@ class EmailNotificationForm extends React.Component {
                        options={this.formatUsers(users)}
                        onChange={this.handleRecipientsChange('user_recipients')} />
           <HelpBlock>
-            {lodash.get(validation, 'errors.recipients[0]', 'Select Graylog users that will receive this Notification.')}
+            {lodash.get(validation, 'errors.recipients[0]', 'Select tbSyslog users that will receive this Notification.')}
           </HelpBlock>
         </FormGroup>
 

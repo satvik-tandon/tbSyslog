@@ -139,7 +139,7 @@ public class HttpConfiguration {
                     LOG.debug("Using loopback address {}", guessedAddress);
                 }
             } catch (Exception e) {
-                LOG.error("Could not guess primary network address for \"http_publish_uri\". Please configure it in your Graylog configuration.", e);
+                LOG.error("Could not guess primary network address for \"http_publish_uri\". Please configure it in your tbSyslog configuration.", e);
                 throw new ParameterException("No http_publish_uri.", e);
             }
 

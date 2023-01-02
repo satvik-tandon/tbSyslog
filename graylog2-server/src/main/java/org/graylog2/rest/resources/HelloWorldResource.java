@@ -52,7 +52,7 @@ public class HelloWorldResource extends RestResource {
 
     @GET
     @Timed
-    @ApiOperation(value = "A few details about the Graylog node.")
+    @ApiOperation(value = "A few details about the tbSyslog node.")
     @Produces(MediaType.APPLICATION_JSON)
     public HelloWorldResponse helloWorld() {
         final ClusterId clusterId = clusterConfigService.getOrDefault(ClusterId.class, ClusterId.create("UNKNOWN"));

@@ -164,7 +164,7 @@ class EventNotificationFormContainer extends React.Component {
             testResult.message = 'Validation failed, please correct any errors in the form before continuing.';
             this.setState({ validation: body });
           } else {
-            testResult.message = errorResponse.responseMessage || 'Unknown error, please check your Graylog server logs.';
+            testResult.message = errorResponse.responseMessage || 'Unknown error, please check your tbSyslog server logs.';
           }
         },
       )

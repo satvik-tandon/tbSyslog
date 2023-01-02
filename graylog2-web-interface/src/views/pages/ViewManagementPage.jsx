@@ -53,7 +53,7 @@ const ViewManagementPage = createReactClass({
         <span>
           <PageHeader title="Views">
             <span>
-              Graylog view management.
+              tbSyslog view management.
             </span>
 
             {null}

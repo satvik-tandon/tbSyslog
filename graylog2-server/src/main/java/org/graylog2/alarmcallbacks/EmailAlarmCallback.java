@@ -180,7 +180,7 @@ public class EmailAlarmCallback implements AlarmCallback {
 
         configurationRequest.addField(new TextField("subject",
                 "E-Mail Subject",
-                "Graylog alert for stream: ${stream.title}: ${check_result.resultDescription}",
+                "tbSyslog alert for stream: ${stream.title}: ${check_result.resultDescription}",
                 "The subject of sent out mail alerts",
                 ConfigurationField.Optional.NOT_OPTIONAL));
 
@@ -195,7 +195,7 @@ public class EmailAlarmCallback implements AlarmCallback {
                 "User Receivers",
                 Collections.emptyList(),
                 userNames,
-                "Graylog usernames that should receive this alert",
+                "tbSyslog usernames that should receive this alert",
                 ConfigurationField.Optional.OPTIONAL));
 
         configurationRequest.addField(new ListField(CK_EMAIL_RECEIVERS,

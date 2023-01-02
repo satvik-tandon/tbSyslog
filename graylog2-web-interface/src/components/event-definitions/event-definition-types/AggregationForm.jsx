@@ -86,11 +86,11 @@ class AggregationForm extends React.Component {
                            value={lodash.defaultTo(eventDefinition.config.group_by, []).join(',')}
                            allowCreate />
               <HelpBlock>
-                Select Fields that Graylog should use to group Filter results when they have identical values.
+                Select Fields that tbSyslog should use to group Filter results when they have identical values.
                 {' '}<b>Example:</b><br />
-                Assuming you created a Filter with all failed log-in attempts in your network, Graylog could alert you
+                Assuming you created a Filter with all failed log-in attempts in your network, tbSyslog could alert you
                 when there are more than 5 failed log-in attempts overall. Now, add <code>username</code> as Group by
-                Field and Graylog will alert you <em>for each <code>username</code></em> with more than 5 failed
+                Field and tbSyslog will alert you <em>for each <code>username</code></em> with more than 5 failed
                 log-in attempts.
               </HelpBlock>
             </FormGroup>

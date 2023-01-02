@@ -103,7 +103,7 @@ class LookupTableFieldValueProviderForm extends React.Component {
                     matchProp="label"
                     required />
             <HelpBlock>
-              {validation.errors.table_name || 'Select the Lookup Table Graylog should use to get the value.'}
+              {validation.errors.table_name || 'Select the Lookup Table tbSyslog should use to get the value.'}
             </HelpBlock>
           </FormGroup>
 

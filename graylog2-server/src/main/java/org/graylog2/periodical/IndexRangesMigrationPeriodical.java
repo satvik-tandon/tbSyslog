@@ -81,7 +81,7 @@ public class IndexRangesMigrationPeriodical extends Periodical {
     public void doRun() {
         final MongoIndexRangesMigrationComplete migrationComplete = clusterConfigService.get(MongoIndexRangesMigrationComplete.class);
         if (migrationComplete != null && migrationComplete.complete) {
-            LOG.debug("Migration of index ranges (pre Graylog 1.2.2) already complete. Skipping migration process.");
+            LOG.debug("Migration of index ranges already complete. Skipping migration process.");
             return;
         }
 

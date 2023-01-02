@@ -55,7 +55,7 @@ class EventDefinitions extends React.Component {
           <EmptyEntity>
             <p>
               Create Event Definitions that are able to search, aggregate or correlate Messages and other
-              Events, allowing you to record significant Events in Graylog and alert on them.
+              Events, allowing you to record significant Events in tbSyslog and alert on them.
             </p>
             <IfPermitted permissions="eventdefinitions:create">
               <LinkContainer to={Routes.ALERTS.DEFINITIONS.CREATE}>

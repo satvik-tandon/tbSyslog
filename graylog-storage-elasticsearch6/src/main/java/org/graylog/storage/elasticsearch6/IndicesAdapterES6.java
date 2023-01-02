@@ -442,7 +442,7 @@ public class IndicesAdapterES6 implements IndicesAdapter {
 
     @Override
     public boolean deleteIndexTemplate(String templateName) {
-        final JestResult result = JestUtils.execute(jestClient, new DeleteTemplate.Builder(templateName).build(), () -> "Unable to delete the Graylog index template " + templateName);
+        final JestResult result = JestUtils.execute(jestClient, new DeleteTemplate.Builder(templateName).build(), () -> "Unable to delete the tbSyslog index template " + templateName);
         return result.isSucceeded();
     }
 

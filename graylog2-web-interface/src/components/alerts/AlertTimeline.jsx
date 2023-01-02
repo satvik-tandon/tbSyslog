@@ -70,7 +70,7 @@ const AlertTimeline = createReactClass({
         formattedHistories.push(
           <dt key={`${history.id}-title`}><Timestamp dateTime={history.created_at} /></dt>,
           (<dd key={`${history.id}-desc`}>
-            Graylog {history.result.type === 'error' ? 'could not send' : 'sent'} {title} notification
+            tbSyslog {history.result.type === 'error' ? 'could not send' : 'sent'} {title} notification
           </dd>),
         );
       });
@@ -96,7 +96,7 @@ const AlertTimeline = createReactClass({
       const conditionParameters = this.props.alert.condition_parameters || {};
       const repeatNotifications = conditionParameters.repeat_notifications || false;
       const notificationsText = (repeatNotifications
-        ? 'Condition is configured to repeat notifications, Graylog will send notifications when evaluating the condition until it is no longer satisfied'
+        ? 'Condition is configured to repeat notifications, tbSyslog will send notifications when evaluating the condition until it is no longer satisfied'
         : 'Condition is configured to not repeat notifications');
 
       formattedResolution.push(
@@ -131,11 +131,11 @@ const AlertTimeline = createReactClass({
     return (
       <dl className={`dl-horizontal ${style.alertTimeline}`}>
         <dt>{triggeredAtTimestamp}</dt>
-        <dd>Graylog checks {title} condition on stream <em>{this.props.stream.title}</em></dd>
+        <dd>tbSyslog checks {title} condition on stream <em>{this.props.stream.title}</em></dd>
         <dt>{triggeredAtTimestamp}</dt>
         <dd>{alert.description}</dd>
         <dt>{triggeredAtTimestamp}</dt>
-        <dd>Graylog triggers an alert for {title} and starts sending notifications</dd>
+        <dd>tbSyslog triggers an alert for {title} and starts sending notifications</dd>
         {this._historiesTimeline(alert.triggered_at)}
         {this._resolutionTimeline()}
       </dl>

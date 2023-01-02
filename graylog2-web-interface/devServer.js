@@ -61,7 +61,7 @@ const port = argv.port || DEFAULT_PORT;
 
 server
   .listen(port, host, () => {
-    console.log(`Graylog web interface listening on http://${server.address().address}:${server.address().port}!\n`);
+    console.log(`tbSyslog web interface listening on http://${server.address().address}:${server.address().port}!\n`);
   })
   .on('error', (error) => {
     if (error.code === 'EADDRINUSE') {

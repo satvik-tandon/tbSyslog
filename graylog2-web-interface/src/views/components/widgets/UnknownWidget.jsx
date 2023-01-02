@@ -75,10 +75,6 @@ const UnknownWidget = ({ config, type }: WidgetProps) => (
       </Row>
 
       <Row>
-        What can you do about it? You can load the plugin again, contact the original plugin author for a plugin that
-        works with Graylog 3.2+, or remove the widget if you do not need it anymore.
-      </Row>
-      <Row>
         Either way, you can copy the widget&rsquo;s config to the
         clipboard: <ClipboardButton title={<Icon name="copy" bsSize="sm" />} text={JSON.stringify(config, null, 2)} bsSize="xsmall" />
       </Row>

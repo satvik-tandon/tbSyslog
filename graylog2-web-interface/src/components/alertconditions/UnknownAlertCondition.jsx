@@ -40,7 +40,7 @@ class UnknownAlertCondition extends React.Component {
     const content = (
       <Col md={12}>
         <Alert bsStyle="warning">
-          Could not resolve condition type. This is most likely caused by a missing plugin in your Graylog setup.
+          Could not resolve condition type. This is most likely caused by a missing plugin in your tbSyslog setup.
         </Alert>
       </Col>
     );

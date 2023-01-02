@@ -322,12 +322,12 @@ public class V20180212165000_AddDefaultCollectors extends Migration {
             try {
                 return collectorService.save(newCollector).id();
             } catch (Exception e) {
-                LOG.error("Can't save collector " + collectorName + ", please restart Graylog to fix this.", e);
+                LOG.error("Can't save collector " + collectorName + ", please restart tbSyslog to fix this.", e);
             }
         }
 
         if (collector == null) {
-            LOG.error("Unable to access fixed " + collectorName + " collector, please restart Graylog to fix this.");
+            LOG.error("Unable to access fixed " + collectorName + " collector, please restart tbSyslog to fix this.");
             return null;
         }
 

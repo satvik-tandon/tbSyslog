@@ -77,7 +77,7 @@ class MetricsComponent extends React.Component {
               ) : (
                 <span>There was a problem fetching node metrics.</span>
               )}
-              {' '}Graylog will keep trying to get them in the background.
+              {' '}tbSyslog will keep trying to get them in the background.
             </Alert>
           </Col>
         </Row>

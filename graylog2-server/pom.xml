@@ -46,7 +46,7 @@
 
     <mailingLists>
         <mailingList>
-            <name>Graylog User List</name>
+            <name>tbSyslog User List</name>
             <subscribe>graylog2+subscribe@googlegroups.com</subscribe>
             <unsubscribe>graylog2+unsubscribe@googlegroups.com</unsubscribe>
             <post>graylog2@googlegroups.com</post>

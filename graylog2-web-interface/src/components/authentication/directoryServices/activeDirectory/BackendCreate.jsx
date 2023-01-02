@@ -48,17 +48,17 @@ export const HELP = {
   ),
   userNameAttribute: (
     <span>
-      Which Active Directory attribute to use for the full name of the user in Graylog, e.g. <code>userPrincipalName</code>.<br />
+      Which Active Directory attribute to use for the full name of the user in tbSyslog, e.g. <code>userPrincipalName</code>.<br />
       Try to load a test user in the sidebar section <i>User Login Test</i>, if you are unsure which attribute to use.
     </span>
   ),
   userFullNameAttribute: (
     <span>
-      Which Active Directory attribute to use for the full name of a synchronized Graylog user, e.g. <code>displayName</code>.<br />
+      Which Active Directory attribute to use for the full name of a synchronized tbSyslog user, e.g. <code>displayName</code>.<br />
     </span>
   ),
   defaultRoles: (
-    <span>The default Graylog roles synchronized user will obtain. All users need the <code>Reader</code> role, to use the Graylog web interface</span>
+    <span>The default tbSyslog roles synchronized user will obtain. All users need the <code>Reader</code> role, to use the tbSyslog web interface</span>
   ),
 };
 

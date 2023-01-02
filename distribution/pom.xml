@@ -67,7 +67,7 @@
                     <!-- to make it easier to collect assemblies, we put them into the _parent's_ build directory -->
                     <!-- FIXME: Use a proper output directory. parent.parent.build.directory is a hack… -->
                     <outputDirectory>${project.basedir}/../target/assembly</outputDirectory>
-                    <finalName>graylog-${project.version}-${maven.build.timestamp}</finalName>
+                    <finalName>graylog</finalName>
                 </configuration>
             </plugin>
         </plugins>

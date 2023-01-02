@@ -21,13 +21,13 @@ import org.graylog2.bootstrap.CliCommand;
 import org.graylog2.plugin.Tools;
 import org.graylog2.plugin.Version;
 
-@Command(name = "version", description = "Show the Graylog and JVM versions")
+@Command(name = "version", description = "Show the tbSyslog and JVM versions")
 public class ShowVersion implements CliCommand {
     private final Version version = Version.CURRENT_CLASSPATH;
 
     @Override
     public void run() {
-        System.out.println("Graylog " + version);
+        System.out.println("tbSyslog " + version);
         System.out.println("JRE: " + Tools.getSystemInformation());
     }
 }

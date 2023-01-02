@@ -35,8 +35,7 @@
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
-    <description>Graylog ${project.artifactId} plugin.</description>
-    <url>https://www.graylog.org</url>
+    <description>tbSyslog ${project.artifactId} plugin.</description>
 
     <developers>
         <developer>

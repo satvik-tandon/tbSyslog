@@ -165,7 +165,7 @@ class EditQueryParameterModal extends React.Component {
                     clearable={false}
                     required />
             <HelpBlock>
-              {validation.lookup_table || 'Select the Lookup Table Graylog should use to get the values.'}
+              {validation.lookup_table || 'Select the Lookup Table tbSyslog should use to get the values.'}
             </HelpBlock>
           </FormGroup>
           <Input type="text"

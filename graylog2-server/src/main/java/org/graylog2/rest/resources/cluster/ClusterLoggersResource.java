@@ -50,7 +50,7 @@ import java.util.Optional;
 import java.util.concurrent.ExecutorService;
 
 @RequiresAuthentication
-@Api(value = "Cluster/System/Loggers", description = "Cluster-wide access to internal Graylog loggers")
+@Api(value = "Cluster/System/Loggers", description = "Cluster-wide access to internal tbSyslog loggers")
 @Path("/cluster/system/loggers")
 public class ClusterLoggersResource extends ProxiedResource {
     @Inject

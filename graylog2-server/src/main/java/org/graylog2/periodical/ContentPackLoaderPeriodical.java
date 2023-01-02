@@ -117,7 +117,7 @@ public class ContentPackLoaderPeriodical extends Periodical {
     @Override
     public void doRun() {
         if (!Files.exists(contentPacksDir.toAbsolutePath())) {
-           LOG.warn("Could not find content packs directory {}. Please check your graylog configuration",
+           LOG.warn("Could not find content packs directory {}. Please check your tbSyslog configuration",
                    contentPacksDir.toAbsolutePath());
            return;
         }

@@ -128,7 +128,7 @@ const GraylogClusterOverview = createReactClass({
   },
 
   renderHeader() {
-    return <h2 style={{ marginBottom: 10 }}>Graylog cluster</h2>;
+    return <h2 style={{ marginBottom: 10 }}>tbSyslog cluster</h2>;
   },
 
   renderDefaultLayout() {

@@ -942,7 +942,7 @@
       this.type = this.type.toUpperCase();
 
       if(this.type != "GET") {
-        if(!confirm("Really execute this non-GET operation? It will be executed on the Graylog server node.")){
+        if(!confirm("Really execute this non-GET operation? It will be executed on the tbSyslog server node.")){
           $(".response_throbber").hide();
           return;
         }

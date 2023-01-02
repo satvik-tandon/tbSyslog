@@ -32,7 +32,7 @@ const PageErrorOverview = ({ errors }) => {
     <ErrorPage title="Error getting data" description={description}>
       <ul>
         {formattedErrors}
-        <li>Check your Graylog logs for more information.</li>
+        <li>Check your tbSyslog logs for more information.</li>
       </ul>
     </ErrorPage>
   );

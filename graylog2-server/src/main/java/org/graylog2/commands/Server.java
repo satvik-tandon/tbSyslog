@@ -98,7 +98,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.graylog2.audit.AuditEventTypes.NODE_SHUTDOWN_INITIATE;
 
-@Command(name = "server", description = "Start the Graylog server")
+@Command(name = "server", description = "Start the tbSyslog server")
 public class Server extends ServerBootstrap {
     private static final Logger LOG = LoggerFactory.getLogger(Server.class);
 
@@ -121,7 +121,7 @@ public class Server extends ServerBootstrap {
         super("server", configuration);
     }
 
-    @Option(name = {"-l", "--local"}, description = "Run Graylog in local mode. Only interesting for Graylog developers.")
+    @Option(name = {"-l", "--local"}, description = "Run tbSyslog in local mode. Only interesting for tbSyslog developers.")
     private boolean local = false;
 
     public boolean isLocal() {
