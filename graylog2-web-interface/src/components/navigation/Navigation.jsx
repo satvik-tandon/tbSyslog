@@ -32,7 +32,6 @@ import GlobalThroughput from 'components/throughput/GlobalThroughput';
 import Routes from 'routing/Routes';
 
 import UserMenu from './UserMenu';
-import HelpMenu from './HelpMenu';
 import NavigationBrand from './NavigationBrand';
 import NotificationBadge from './NotificationBadge';
 import NavigationLink from './NavigationLink';
@@ -141,8 +140,6 @@ const Navigation = ({ location }: Props) => {
           </InactiveNavItem>
 
           <ScratchpadToggle />
-
-          <HelpMenu active={_isActive(location.pathname, Routes.GETTING_STARTED)} />
 
           <UserMenu fullName={fullName} readOnly={readOnly} userId={userId} />
         </Nav>

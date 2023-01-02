@@ -88,9 +88,7 @@ describe('Navigation', () => {
       expect(usermenu).toHaveProp('fullName', currentUser.full_name);
     });
 
-    it('contains help menu', () => {
-      expect(wrapper.find('HelpMenu')).toExist();
-    });
+
 
     it('contains global throughput', () => {
       expect(wrapper.find('GlobalThroughput')).toExist();
