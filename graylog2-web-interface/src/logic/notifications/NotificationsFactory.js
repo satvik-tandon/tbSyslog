@@ -210,16 +210,6 @@ class NotificationsFactory {
             </span>
           ),
         };
-      case 'outdated_version':
-        return {
-          // title: 'You are running an outdated tbSyslog version.',
-          // description: (
-          //   <span>
-          //     The most recent stable tbSyslog version is <em>{notification.details.current_version}</em>.
-          //     Get it from <a href="https://www.graylog.org/" target="_blank">https://www.graylog.org/</a>.
-          //   </span>
-          // ),
-        };
       case 'output_disabled':
         return {
           title: 'Output disabled',
