@@ -46,7 +46,7 @@ export const viewsManager = Role.builder()
 export const reader = Role.builder()
   .id('reader-id')
   .name('Reader')
-  .description('Grants basic permissions for every Graylog user (built-in)')
+  .description('Grants basic permissions for every tbSyslog user (built-in)')
   .permissions(Immutable.Set(['clusterconfigentry:read', 'indexercluster:read']))
   .readOnly(true)
   .build();
