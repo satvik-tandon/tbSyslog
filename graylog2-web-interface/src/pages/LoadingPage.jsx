@@ -36,7 +36,7 @@ const LoadingPage = ({ text }: Props) => {
     <DocumentTitle title="Loading...">
       <LoadingPageStyles />
       <LoginBox>
-        <legend><Icon name="users" /> Welcome to Graylog</legend>
+        <legend><Icon name="users" /> Welcome to tbSyslog</legend>
         <p>
           <Spinner text={text} delay={0} />
         </p>

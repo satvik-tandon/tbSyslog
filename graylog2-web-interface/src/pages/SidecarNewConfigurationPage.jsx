@@ -40,9 +40,6 @@ const SidecarNewConfigurationPage = createReactClass({
               Some words about collector configurations.
             </span>
 
-            <span>
-              Read more about the Graylog Sidecar in the documentation.
-            </span>
 
             <ButtonToolbar>
               <LinkContainer to={Routes.SYSTEM.SIDECARS.OVERVIEW}>

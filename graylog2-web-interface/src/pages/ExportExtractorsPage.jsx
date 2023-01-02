@@ -61,7 +61,6 @@ const ExportExtractorsPage = createReactClass({
           <PageHeader title={<span>Export extractors of <em>{input.title}</em></span>}>
             <span>
               The extractors of an input can be exported to JSON for importing into other setups
-              or sharing in <a href="https://marketplace.graylog.org/" rel="noopener noreferrer" target="_blank">the Graylog Marketplace</a>.
             </span>
           </PageHeader>
           <ExportExtractors input={input} />

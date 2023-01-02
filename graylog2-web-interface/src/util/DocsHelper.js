@@ -52,7 +52,7 @@ class DocsHelper {
     WELCOME: '', // Welcome page to the documentation
   };
 
-  DOCS_URL = 'https://docs.graylog.org/en/';
+  DOCS_URL = '';
 
   toString(path) {
     const version = Version.getMajorAndMinorVersion();

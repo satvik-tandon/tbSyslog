@@ -35,9 +35,6 @@ const SidecarNewCollectorPage = createReactClass({
               Some words about log collectors.
             </span>
 
-            <span>
-              Read more about the Graylog Sidecar in the documentation.
-            </span>
 
             <ButtonToolbar>
               <LinkContainer to={Routes.SYSTEM.SIDECARS.OVERVIEW}>

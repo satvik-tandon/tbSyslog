@@ -30,7 +30,6 @@ import type { Location } from 'routing/withLocation';
 
 const SystemStore = StoreProvider.getStore('System');
 
-const GETTING_STARTED_URL = 'https://gettingstarted.graylog.org/';
 
 type Props = {
   system: {
@@ -55,7 +54,6 @@ const GettingStartedPage = ({ system, location }: Props) => {
         <GettingStarted clusterId={clusterId}
                         masterOs={operatingSystem}
                         masterVersion={version}
-                        gettingStartedUrl={GETTING_STARTED_URL}
                         noDismissButton={Boolean(location.query.menu)}
                         onDismiss={_onDismiss} />
       </Row>

@@ -103,7 +103,7 @@ const ShowNodePage = createReactClass({
         <div>
           <PageHeader title={title}>
             <span>
-              This page shows details of a Graylog server node that is active and reachable in your cluster.
+              This page shows details of a tbSyslog server node that is active and reachable in your cluster.
             </span>
             <span>
               {node.is_master ? <span>This is the master node.</span> : <span>This is <em>not</em> the master node.</span>}
